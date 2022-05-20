@@ -14,6 +14,10 @@ target_include_directories(${PROJECT_NAME} PUBLIC
                                 ${CMAKE_CURRENT_SOURCE_DIR}/include
 )      
 
+target_link_libraries(${PROJECT_NAME}
+        pthread
+)
+
 install(CODE "MESSAGE(\"Installing ${PROJECT_NAME} \")")
 install(TARGETS ${PROJECT_NAME}
     RUNTIME DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/bin

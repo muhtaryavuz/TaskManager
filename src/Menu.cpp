@@ -17,7 +17,7 @@ void Menu::printMainMenu() const
 std::pair<std::string, uint64_t> Menu::getInputFromUser()
 {
     std::string input;
-    std::cin>> input;
+    std::getline(std::cin, input);
 
     return parseUserInput(input);
 }
